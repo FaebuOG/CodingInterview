@@ -1,7 +1,12 @@
 ﻿namespace Securiton.Domain
 {
-  abstract class Permission
+  public abstract class Permission
   {
     public string Name { get; }
+
+    protected Permission(string name)
+    {
+      Name = name;
+    }
   }
 }

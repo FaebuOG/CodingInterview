@@ -1,5 +1,4 @@
-﻿using NUnit.Framework;
-using Securiton.Api;
+﻿using Securiton.Api;
 using Securiton.Domain;
 using Securiton.Infrastructure;
 using Securiton.Protocol;
@@ -10,10 +9,13 @@ using Securiton.Transport;
 
 namespace Securiton.Tests.EditMode
 {
-  public sealed class DeviceServiceTests
+  using NUnit.Framework;
+  using System.Collections.Generic;
+
+  public sealed class DeviceServiceWriteUserPermissionsTests
   {
     [Test]
-    public void WriteAlarmConfiguration_ReturnsSuccessfulAck()
+    public void WriteUserPermissions_ReturnsSuccessfulAck()
     {
       var transport = new FakeTransport();
       var encryptor = new FakeEncryptor();
@@ -23,18 +25,24 @@ namespace Securiton.Tests.EditMode
 
       var alarmSerializer = new AlarmConfigSerializer();
       var permissionSerializer = new PermissionSerializer();
-      var userPermissionsSerializer = new WriteUserPermissionsRequestSerializer(permissionSerializer);
+      var userPermissionsRequestSerializer = new WriteUserPermissionsRequestSerializer(permissionSerializer);
       var ackDeserializer = new AckResponseDeserializer();
 
       var service = new DeviceService(
         client,
         alarmSerializer,
-        userPermissionsSerializer,
+        userPermissionsRequestSerializer,
         ackDeserializer);
 
-      var configuration = new AlarmConfiguration(10, 5, true);
+      var root = new GroupPermission(
+        "Root",
+        new List<Permission>
+        {
+          new SimplePermission("CanRead", true),
+          new AccessLevelPermission("DoorAccess", 1)
+        });
 
-      AckResponse response = service.WriteAlarmConfiguration(configuration);
+      AckResponse response = service.WriteUserPermissions(root);
 
       Assert.That(response.Success, Is.True);
       Assert.That(response.ErrorCode, Is.EqualTo(0x00));

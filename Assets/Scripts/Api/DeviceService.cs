@@ -11,15 +11,18 @@ namespace Securiton.Api
   {
     private readonly DeviceClient _client;
     private readonly IRequestSerializer<WriteAlarmConfigurationRequest> _alarmSerializer;
+    private readonly IRequestSerializer<WriteUserPermissionsRequest> _userPermissionsSerializer;
     private readonly IResponseDeserializer<AckResponse> _ackDeserializer;
 
     public DeviceService(
       DeviceClient client,
       IRequestSerializer<WriteAlarmConfigurationRequest> alarmSerializer,
+      IRequestSerializer<WriteUserPermissionsRequest> userPermissionsSerializer,
       IResponseDeserializer<AckResponse> ackDeserializer)
     {
       _client = client;
       _alarmSerializer = alarmSerializer;
+      _userPermissionsSerializer = userPermissionsSerializer;
       _ackDeserializer = ackDeserializer;
     }
 
@@ -30,6 +33,16 @@ namespace Securiton.Api
       return _client.Send<WriteAlarmConfigurationRequest, AckResponse>(
         request,
         _alarmSerializer,
+        _ackDeserializer);
+    }
+
+    public AckResponse WriteUserPermissions(GroupPermission rootPermissionGroup)
+    {
+      var request = new WriteUserPermissionsRequest(rootPermissionGroup);
+
+      return _client.Send<WriteUserPermissionsRequest, AckResponse>(
+        request,
+        _userPermissionsSerializer,
         _ackDeserializer);
     }
   }
