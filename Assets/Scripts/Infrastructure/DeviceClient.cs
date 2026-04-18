@@ -2,7 +2,6 @@
 using Securiton.Requests;
 using Securiton.Serialization;
 using Securiton.Transport;
-using Serialization;
 
 namespace Securiton.Infrastructure
 {

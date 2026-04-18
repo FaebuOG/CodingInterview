@@ -1,4 +1,4 @@
-﻿namespace Serialization
+﻿namespace Securiton.Serialization
 {
   public interface IRequestSerializer<in TRequest>
   {

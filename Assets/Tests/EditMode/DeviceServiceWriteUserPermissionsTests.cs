@@ -42,17 +42,23 @@ namespace Securiton.Tests.EditMode
             // but the DeviceService constructor now requires them.
             var readSensorValueSerializer = new ReadSensorValueRequestSerializer();
             var sensorValueDeserializer = new SensorValueDeserializer();
+            
+            var readAlarmConfigurationSerializer = new ReadAlarmConfigurationRequestSerializer();
+            var alarmConfigurationDeserializer = new AlarmConfigurationDeserializer();
 
             // Converts acknowledgement payload bytes back into AckResponse.
             var ackDeserializer = new AckResponseDeserializer();
+
 
             var service = new DeviceService(
                 client,
                 alarmSerializer,
                 userPermissionsSerializer,
                 readSensorValueSerializer,
+                readAlarmConfigurationSerializer,
                 ackDeserializer,
-                sensorValueDeserializer);
+                sensorValueDeserializer,
+                alarmConfigurationDeserializer);
 
             // Create a realistic permission tree:
             // root group with a simple permission, an access-level permission,

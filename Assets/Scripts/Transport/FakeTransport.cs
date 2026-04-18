@@ -18,9 +18,10 @@ namespace Securiton.Transport
 
             return requestId switch
             {
+                ReadAlarmConfigurationRequest.Id => BuildAlarmConfigurationResponse(requestId, 10, 5, true),
                 WriteAlarmConfigurationRequest.Id => BuildAckResponse(requestId, true, 0x00),
-                WriteUserPermissionsRequest.Id => BuildAckResponse(requestId, true, 0x00),
                 ReadSensorValueRequest.Id => BuildSensorValueResponse(requestId, 42.5f),
+                WriteUserPermissionsRequest.Id => BuildAckResponse(requestId, true, 0x00),
                 _ => BuildAckResponse(requestId, false, 0xFF)
             };
         }
@@ -58,11 +59,9 @@ namespace Securiton.Transport
             using var stream = new MemoryStream();
             using var writer = new BinaryWriter(stream);
 
-            // Response header
             writer.Write(requestId);
-            writer.Write((byte)0x00); // statusCode = OK
+            writer.Write((byte)0x00);
 
-            // Payload
             byte[] payload = BuildSensorValuePayload(sensorValue);
             writer.Write(payload.Length);
             writer.Write(payload);
@@ -77,6 +76,35 @@ namespace Securiton.Transport
             using var writer = new BinaryWriter(stream);
 
             writer.Write(sensorValue);
+
+            writer.Flush();
+            return stream.ToArray();
+        }
+
+        private static byte[] BuildAlarmConfigurationResponse(byte requestId, int threshold, int reactionTime, bool isEnabled)
+        {
+            using var stream = new MemoryStream();
+            using var writer = new BinaryWriter(stream);
+
+            writer.Write(requestId);
+            writer.Write((byte)0x00);
+
+            byte[] payload = BuildAlarmConfigurationPayload(threshold, reactionTime, isEnabled);
+            writer.Write(payload.Length);
+            writer.Write(payload);
+
+            writer.Flush();
+            return stream.ToArray();
+        }
+
+        private static byte[] BuildAlarmConfigurationPayload(int threshold, int reactionTime, bool isEnabled)
+        {
+            using var stream = new MemoryStream();
+            using var writer = new BinaryWriter(stream);
+
+            writer.Write(threshold);
+            writer.Write(reactionTime);
+            writer.Write(isEnabled);
 
             writer.Flush();
             return stream.ToArray();

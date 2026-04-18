@@ -1,6 +1,5 @@
 ﻿using System.IO;
 using Securiton.Requests;
-using Serialization;
 
 namespace Securiton.Serialization
 {

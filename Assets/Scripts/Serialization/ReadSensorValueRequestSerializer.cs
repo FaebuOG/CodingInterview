@@ -1,5 +1,4 @@
 ﻿using Securiton.Requests;
-using Serialization;
 
 namespace Securiton.Serialization
 {

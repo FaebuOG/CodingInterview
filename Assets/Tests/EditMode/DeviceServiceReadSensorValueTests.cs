@@ -34,13 +34,18 @@ namespace Securiton.Tests.EditMode
       var ackDeserializer = new AckResponseDeserializer();
       var sensorValueDeserializer = new SensorValueDeserializer();
 
+      var readAlarmConfigurationSerializer = new ReadAlarmConfigurationRequestSerializer();
+      var alarmConfigurationDeserializer = new AlarmConfigurationDeserializer();
+
       var service = new DeviceService(
         client,
         alarmSerializer,
         userPermissionsSerializer,
         readSensorValueSerializer,
+        readAlarmConfigurationSerializer,
         ackDeserializer,
-        sensorValueDeserializer);
+        sensorValueDeserializer,
+        alarmConfigurationDeserializer);
 
       // Act
       SensorValue response = service.ReadSensorValue();

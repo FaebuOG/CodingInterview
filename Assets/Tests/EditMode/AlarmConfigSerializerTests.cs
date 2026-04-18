@@ -2,7 +2,6 @@
 using NUnit.Framework;
 using Securiton.Requests;
 using Securiton.Serialization;
-using Serialization;
 
 namespace Securiton.Tests.EditMode
 {
