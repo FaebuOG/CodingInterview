@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using Securiton.Protocol;
 
-namespace Securiton.Tests.EditMode
+namespace Securiton.Tests.EditMode.Protocol
 {
   public sealed class RequestPacketBuilderTests
   {

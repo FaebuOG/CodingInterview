@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="32" result="Passed" total="32" passed="32" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.452831">
+  <test-suite type="TestSuite" id="1062" name="CodingInterview" fullname="CodingInterview" runstate="Runnable" testcasecount="32" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.452831" total="32" passed="32" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1051" name="Assembly-CSharp.dll" fullname="D:/_Privat/Fabian/Securiton AG/CodingInterview/CodingInterview/Library/ScriptAssemblies/Assembly-CSharp.dll" runstate="Runnable" testcasecount="32" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.442311" total="32" passed="32" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="5728" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1052" name="Securiton" fullname="Securiton" runstate="Runnable" testcasecount="32" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.438658" total="32" passed="32" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1053" name="Tests" fullname="Securiton.Tests" runstate="Runnable" testcasecount="32" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.435688" total="32" passed="32" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1054" name="EditMode" fullname="Securiton.Tests.EditMode" runstate="Runnable" testcasecount="32" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.432607" total="32" passed="32" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1016" name="AckResponseDeserializerTests" fullname="Securiton.Tests.EditMode.AckResponseDeserializerTests" classname="Securiton.Tests.EditMode.AckResponseDeserializerTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.141484" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1018" name="Deserialize_ReadsFailureAndErrorCodeCorrectly" fullname="Securiton.Tests.EditMode.AckResponseDeserializerTests.Deserialize_ReadsFailureAndErrorCodeCorrectly" methodname="Deserialize_ReadsFailureAndErrorCodeCorrectly" classname="Securiton.Tests.EditMode.AckResponseDeserializerTests" runstate="Runnable" seed="1343371270" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.088980" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1017" name="Deserialize_ReadsSuccessAndErrorCodeCorrectly" fullname="Securiton.Tests.EditMode.AckResponseDeserializerTests.Deserialize_ReadsSuccessAndErrorCodeCorrectly" methodname="Deserialize_ReadsSuccessAndErrorCodeCorrectly" classname="Securiton.Tests.EditMode.AckResponseDeserializerTests" runstate="Runnable" seed="463879441" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.000367" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1004" name="AlarmConfigSerializerTests" fullname="Securiton.Tests.EditMode.AlarmConfigSerializerTests" classname="Securiton.Tests.EditMode.AlarmConfigSerializerTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.048278" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1006" name="Serialize_WritesFalseBooleanCorrectly" fullname="Securiton.Tests.EditMode.AlarmConfigSerializerTests.Serialize_WritesFalseBooleanCorrectly" methodname="Serialize_WritesFalseBooleanCorrectly" classname="Securiton.Tests.EditMode.AlarmConfigSerializerTests" runstate="Runnable" seed="2000115322" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.000441" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1005" name="Serialize_WritesThresholdReactionTimeAndIsEnabled_InCorrectOrder" fullname="Securiton.Tests.EditMode.AlarmConfigSerializerTests.Serialize_WritesThresholdReactionTimeAndIsEnabled_InCorrectOrder" methodname="Serialize_WritesThresholdReactionTimeAndIsEnabled_InCorrectOrder" classname="Securiton.Tests.EditMode.AlarmConfigSerializerTests" runstate="Runnable" seed="1925938269" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.040173" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1019" name="AlarmConfigurationDeserializerTests" fullname="Securiton.Tests.EditMode.AlarmConfigurationDeserializerTests" classname="Securiton.Tests.EditMode.AlarmConfigurationDeserializerTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.003717" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1020" name="Deserialize_ReadsThresholdReactionTimeAndIsEnabledCorrectly" fullname="Securiton.Tests.EditMode.AlarmConfigurationDeserializerTests.Deserialize_ReadsThresholdReactionTimeAndIsEnabledCorrectly" methodname="Deserialize_ReadsThresholdReactionTimeAndIsEnabledCorrectly" classname="Securiton.Tests.EditMode.AlarmConfigurationDeserializerTests" runstate="Runnable" seed="423312074" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.000654" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1021" name="GroupPermissionDeserializerTests" fullname="Securiton.Tests.EditMode.GroupPermissionDeserializerTests" classname="Securiton.Tests.EditMode.GroupPermissionDeserializerTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.044705" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1022" name="Deserialize_ReturnsExpectedRootGroup" fullname="Securiton.Tests.EditMode.GroupPermissionDeserializerTests.Deserialize_ReturnsExpectedRootGroup" methodname="Deserialize_ReturnsExpectedRootGroup" classname="Securiton.Tests.EditMode.GroupPermissionDeserializerTests" runstate="Runnable" seed="1069937412" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.042074" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestSuite" id="1058" name="Integration" fullname="Securiton.Tests.EditMode.Integration" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.078219" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="TestFixture" id="1041" name="ReadAlarmConfigurationFlowTests" fullname="Securiton.Tests.EditMode.Integration.ReadAlarmConfigurationFlowTests" classname="Securiton.Tests.EditMode.Integration.ReadAlarmConfigurationFlowTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.043661" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1042" name="ReadAlarmConfiguration_ReturnsExpectedConfiguration" fullname="Securiton.Tests.EditMode.Integration.ReadAlarmConfigurationFlowTests.ReadAlarmConfiguration_ReturnsExpectedConfiguration" methodname="ReadAlarmConfiguration_ReturnsExpectedConfiguration" classname="Securiton.Tests.EditMode.Integration.ReadAlarmConfigurationFlowTests" runstate="Runnable" seed="1110576738" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.041096" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-suite type="TestFixture" id="1043" name="ReadSensorValueFlowTests" fullname="Securiton.Tests.EditMode.Integration.ReadSensorValueFlowTests" classname="Securiton.Tests.EditMode.Integration.ReadSensorValueFlowTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.004207" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1044" name="ReadSensorValue_ReturnsExpectedSensorValue" fullname="Securiton.Tests.EditMode.Integration.ReadSensorValueFlowTests.ReadSensorValue_ReturnsExpectedSensorValue" methodname="ReadSensorValue_ReturnsExpectedSensorValue" classname="Securiton.Tests.EditMode.Integration.ReadSensorValueFlowTests" runstate="Runnable" seed="1737207009" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.001276" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-suite type="TestFixture" id="1045" name="ReadUserPermissionsFlowTests" fullname="Securiton.Tests.EditMode.Integration.ReadUserPermissionsFlowTests" classname="Securiton.Tests.EditMode.Integration.ReadUserPermissionsFlowTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.004927" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1046" name="ReadUserPermissions_ReturnsExpectedPermissionHierarchy" fullname="Securiton.Tests.EditMode.Integration.ReadUserPermissionsFlowTests.ReadUserPermissions_ReturnsExpectedPermissionHierarchy" methodname="ReadUserPermissions_ReturnsExpectedPermissionHierarchy" classname="Securiton.Tests.EditMode.Integration.ReadUserPermissionsFlowTests" runstate="Runnable" seed="560963544" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.000753" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-suite type="TestFixture" id="1047" name="WriteAlarmConfigurationFlowTests" fullname="Securiton.Tests.EditMode.Integration.WriteAlarmConfigurationFlowTests" classname="Securiton.Tests.EditMode.Integration.WriteAlarmConfigurationFlowTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.009623" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1048" name="WriteAlarmConfiguration_WithValidConfiguration_ReturnsSuccessfulAck" fullname="Securiton.Tests.EditMode.Integration.WriteAlarmConfigurationFlowTests.WriteAlarmConfiguration_WithValidConfiguration_ReturnsSuccessfulAck" methodname="WriteAlarmConfiguration_WithValidConfiguration_ReturnsSuccessfulAck" classname="Securiton.Tests.EditMode.Integration.WriteAlarmConfigurationFlowTests" runstate="Runnable" seed="299270187" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.000553" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-suite type="TestFixture" id="1049" name="WriteUserPermissionsFlowTests" fullname="Securiton.Tests.EditMode.Integration.WriteUserPermissionsFlowTests" classname="Securiton.Tests.EditMode.Integration.WriteUserPermissionsFlowTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.012791" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1050" name="WriteUserPermissions_WithMixedPermissionTree_ReturnsSuccessfulAck" fullname="Securiton.Tests.EditMode.Integration.WriteUserPermissionsFlowTests.WriteUserPermissions_WithMixedPermissionTree_ReturnsSuccessfulAck" methodname="WriteUserPermissions_WithMixedPermissionTree_ReturnsSuccessfulAck" classname="Securiton.Tests.EditMode.Integration.WriteUserPermissionsFlowTests" runstate="Runnable" seed="1175047399" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.000506" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+            </test-suite>
+            <test-suite type="TestFixture" id="1023" name="PermissionRoundtripTests" fullname="Securiton.Tests.EditMode.PermissionRoundtripTests" classname="Securiton.Tests.EditMode.PermissionRoundtripTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.009020" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1025" name="AccessLevelPermission_Roundtrip_PreservesTypeNameAndAccessLevel" fullname="Securiton.Tests.EditMode.PermissionRoundtripTests.AccessLevelPermission_Roundtrip_PreservesTypeNameAndAccessLevel" methodname="AccessLevelPermission_Roundtrip_PreservesTypeNameAndAccessLevel" classname="Securiton.Tests.EditMode.PermissionRoundtripTests" runstate="Runnable" seed="717437573" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.000415" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1028" name="AccessLevelPermission_WithInvalidLevel_ThrowsArgumentOutOfRangeException" fullname="Securiton.Tests.EditMode.PermissionRoundtripTests.AccessLevelPermission_WithInvalidLevel_ThrowsArgumentOutOfRangeException" methodname="AccessLevelPermission_WithInvalidLevel_ThrowsArgumentOutOfRangeException" classname="Securiton.Tests.EditMode.PermissionRoundtripTests" runstate="Runnable" seed="1778975782" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.000772" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1026" name="GroupPermission_Roundtrip_PreservesChildrenAndChildTypes" fullname="Securiton.Tests.EditMode.PermissionRoundtripTests.GroupPermission_Roundtrip_PreservesChildrenAndChildTypes" methodname="GroupPermission_Roundtrip_PreservesChildrenAndChildTypes" classname="Securiton.Tests.EditMode.PermissionRoundtripTests" runstate="Runnable" seed="1776536982" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.000382" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1027" name="NestedGroupPermission_Roundtrip_PreservesFullHierarchy" fullname="Securiton.Tests.EditMode.PermissionRoundtripTests.NestedGroupPermission_Roundtrip_PreservesFullHierarchy" methodname="NestedGroupPermission_Roundtrip_PreservesFullHierarchy" classname="Securiton.Tests.EditMode.PermissionRoundtripTests" runstate="Runnable" seed="1091947361" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.000407" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1024" name="SimplePermission_Roundtrip_PreservesTypeNameAndGrantedFlag" fullname="Securiton.Tests.EditMode.PermissionRoundtripTests.SimplePermission_Roundtrip_PreservesTypeNameAndGrantedFlag" methodname="SimplePermission_Roundtrip_PreservesTypeNameAndGrantedFlag" classname="Securiton.Tests.EditMode.PermissionRoundtripTests" runstate="Runnable" seed="1657211585" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.000210" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestSuite" id="1057" name="Protocol" fullname="Securiton.Tests.EditMode.Protocol" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.015858" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="TestFixture" id="1036" name="RequestPacketBuilderTests" fullname="Securiton.Tests.EditMode.Protocol.RequestPacketBuilderTests" classname="Securiton.Tests.EditMode.Protocol.RequestPacketBuilderTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.003672" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1038" name="Build_WithNullPayload_WritesZeroLengthPayload" fullname="Securiton.Tests.EditMode.Protocol.RequestPacketBuilderTests.Build_WithNullPayload_WritesZeroLengthPayload" methodname="Build_WithNullPayload_WritesZeroLengthPayload" classname="Securiton.Tests.EditMode.Protocol.RequestPacketBuilderTests" runstate="Runnable" seed="1047389819" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.000328" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1037" name="Build_WritesRequestIdPayloadLengthAndPayload" fullname="Securiton.Tests.EditMode.Protocol.RequestPacketBuilderTests.Build_WritesRequestIdPayloadLengthAndPayload" methodname="Build_WritesRequestIdPayloadLengthAndPayload" classname="Securiton.Tests.EditMode.Protocol.RequestPacketBuilderTests" runstate="Runnable" seed="2140028670" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.000727" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-suite type="TestFixture" id="1039" name="SensorValueDeserializerTests" fullname="Securiton.Tests.EditMode.Protocol.SensorValueDeserializerTests" classname="Securiton.Tests.EditMode.Protocol.SensorValueDeserializerTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.006122" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1040" name="Deserialize_ReadsFloatValueCorrectly" fullname="Securiton.Tests.EditMode.Protocol.SensorValueDeserializerTests.Deserialize_ReadsFloatValueCorrectly" methodname="Deserialize_ReadsFloatValueCorrectly" classname="Securiton.Tests.EditMode.Protocol.SensorValueDeserializerTests" runstate="Runnable" seed="668987235" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.000273" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+            </test-suite>
+            <test-suite type="TestFixture" id="1007" name="ReadAlarmConfigurationRequestSerializerTests" fullname="Securiton.Tests.EditMode.ReadAlarmConfigurationRequestSerializerTests" classname="Securiton.Tests.EditMode.ReadAlarmConfigurationRequestSerializerTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.006423" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1008" name="Serialize_ReturnsEmptyPayload" fullname="Securiton.Tests.EditMode.ReadAlarmConfigurationRequestSerializerTests.Serialize_ReturnsEmptyPayload" methodname="Serialize_ReturnsEmptyPayload" classname="Securiton.Tests.EditMode.ReadAlarmConfigurationRequestSerializerTests" runstate="Runnable" seed="1875488713" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.000240" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1009" name="ReadSensorValueRequestSerializerTests" fullname="Securiton.Tests.EditMode.ReadSensorValueRequestSerializerTests" classname="Securiton.Tests.EditMode.ReadSensorValueRequestSerializerTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.006180" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1010" name="Serialize_ReturnsEmptyPayload" fullname="Securiton.Tests.EditMode.ReadSensorValueRequestSerializerTests.Serialize_ReturnsEmptyPayload" methodname="Serialize_ReturnsEmptyPayload" classname="Securiton.Tests.EditMode.ReadSensorValueRequestSerializerTests" runstate="Runnable" seed="1903921284" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.000214" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1011" name="ReadUserPermissionsRequestSerializerTests" fullname="Securiton.Tests.EditMode.ReadUserPermissionsRequestSerializerTests" classname="Securiton.Tests.EditMode.ReadUserPermissionsRequestSerializerTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.005939" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1012" name="Serialize_ReturnsEmptyPayload" fullname="Securiton.Tests.EditMode.ReadUserPermissionsRequestSerializerTests.Serialize_ReturnsEmptyPayload" methodname="Serialize_ReturnsEmptyPayload" classname="Securiton.Tests.EditMode.ReadUserPermissionsRequestSerializerTests" runstate="Runnable" seed="1465927728" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.000213" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1001" name="ResponsePacketParserTests" fullname="Securiton.Tests.EditMode.ResponsePacketParserTests" classname="Securiton.Tests.EditMode.ResponsePacketParserTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.006138" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1002" name="Parse_ReadsRequestIdStatusCodeAndPayloadCorrectly" fullname="Securiton.Tests.EditMode.ResponsePacketParserTests.Parse_ReadsRequestIdStatusCodeAndPayloadCorrectly" methodname="Parse_ReadsRequestIdStatusCodeAndPayloadCorrectly" classname="Securiton.Tests.EditMode.ResponsePacketParserTests" runstate="Runnable" seed="675788250" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.000389" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1003" name="Parse_WithEmptyPayload_ReturnsEmptyPayloadArray" fullname="Securiton.Tests.EditMode.ResponsePacketParserTests.Parse_WithEmptyPayload_ReturnsEmptyPayloadArray" methodname="Parse_WithEmptyPayload_ReturnsEmptyPayloadArray" classname="Securiton.Tests.EditMode.ResponsePacketParserTests" runstate="Runnable" seed="1165988581" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.000283" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestSuite" id="1055" name="Serialization" fullname="Securiton.Tests.EditMode.Serialization" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.053994" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="TestSuite" id="1056" name="Responses" fullname="Securiton.Tests.EditMode.Serialization.Responses" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.048829" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-suite type="TestFixture" id="1029" name="PermissionDeserializerTests" fullname="Securiton.Tests.EditMode.Serialization.Responses.PermissionDeserializerTests" classname="Securiton.Tests.EditMode.Serialization.Responses.PermissionDeserializerTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.046671" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+                  <properties />
+                  <test-case id="1031" name="Deserialize_AccessLevelPermission_ReturnsCorrectObject" fullname="Securiton.Tests.EditMode.Serialization.Responses.PermissionDeserializerTests.Deserialize_AccessLevelPermission_ReturnsCorrectObject" methodname="Deserialize_AccessLevelPermission_ReturnsCorrectObject" classname="Securiton.Tests.EditMode.Serialization.Responses.PermissionDeserializerTests" runstate="Runnable" seed="780693925" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.001709" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1032" name="Deserialize_GroupPermission_WithChildren_ReturnsCorrectStructure" fullname="Securiton.Tests.EditMode.Serialization.Responses.PermissionDeserializerTests.Deserialize_GroupPermission_WithChildren_ReturnsCorrectStructure" methodname="Deserialize_GroupPermission_WithChildren_ReturnsCorrectStructure" classname="Securiton.Tests.EditMode.Serialization.Responses.PermissionDeserializerTests" runstate="Runnable" seed="165560870" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.000321" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1033" name="Deserialize_NestedGroupPermission_ReconstructsFullHierarchy" fullname="Securiton.Tests.EditMode.Serialization.Responses.PermissionDeserializerTests.Deserialize_NestedGroupPermission_ReconstructsFullHierarchy" methodname="Deserialize_NestedGroupPermission_ReconstructsFullHierarchy" classname="Securiton.Tests.EditMode.Serialization.Responses.PermissionDeserializerTests" runstate="Runnable" seed="304294375" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.000379" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1030" name="Deserialize_SimplePermission_ReturnsCorrectObject" fullname="Securiton.Tests.EditMode.Serialization.Responses.PermissionDeserializerTests.Deserialize_SimplePermission_ReturnsCorrectObject" methodname="Deserialize_SimplePermission_ReturnsCorrectObject" classname="Securiton.Tests.EditMode.Serialization.Responses.PermissionDeserializerTests" runstate="Runnable" seed="1557328547" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.000217" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1035" name="Deserialize_WithTruncatedPayload_ThrowsEndOfStreamException" fullname="Securiton.Tests.EditMode.Serialization.Responses.PermissionDeserializerTests.Deserialize_WithTruncatedPayload_ThrowsEndOfStreamException" methodname="Deserialize_WithTruncatedPayload_ThrowsEndOfStreamException" classname="Securiton.Tests.EditMode.Serialization.Responses.PermissionDeserializerTests" runstate="Runnable" seed="623924059" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.000346" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1034" name="Deserialize_WithUnknownType_ThrowsInvalidDataException" fullname="Securiton.Tests.EditMode.Serialization.Responses.PermissionDeserializerTests.Deserialize_WithUnknownType_ThrowsInvalidDataException" methodname="Deserialize_WithUnknownType_ThrowsInvalidDataException" classname="Securiton.Tests.EditMode.Serialization.Responses.PermissionDeserializerTests" runstate="Runnable" seed="364685059" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.000535" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                </test-suite>
+              </test-suite>
+            </test-suite>
+            <test-suite type="TestFixture" id="1013" name="WriteAlarmConfigurationRequestTests" fullname="Securiton.Tests.EditMode.WriteAlarmConfigurationRequestTests" classname="Securiton.Tests.EditMode.WriteAlarmConfigurationRequestTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.007789" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1015" name="Constructor_FromAlarmConfiguration_CopiesValuesCorrectly" fullname="Securiton.Tests.EditMode.WriteAlarmConfigurationRequestTests.Constructor_FromAlarmConfiguration_CopiesValuesCorrectly" methodname="Constructor_FromAlarmConfiguration_CopiesValuesCorrectly" classname="Securiton.Tests.EditMode.WriteAlarmConfigurationRequestTests" runstate="Runnable" seed="761049058" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.000235" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1014" name="Constructor_FromValues_SetsPropertiesCorrectly" fullname="Securiton.Tests.EditMode.WriteAlarmConfigurationRequestTests.Constructor_FromValues_SetsPropertiesCorrectly" methodname="Constructor_FromValues_SetsPropertiesCorrectly" classname="Securiton.Tests.EditMode.WriteAlarmConfigurationRequestTests" runstate="Runnable" seed="249882092" result="Passed" start-time="2026-04-18 10:19:21Z" end-time="2026-04-18 10:19:21Z" duration="0.000197" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Saving results to: C:/Users/Fabian/AppData/LocalLow/DefaultCompany/CodingInterview\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

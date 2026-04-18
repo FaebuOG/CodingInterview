@@ -3,7 +3,7 @@ using NUnit.Framework;
 using Securiton.Domain;
 using Securiton.Serialization;
 
-namespace Securiton.Tests.EditMode
+namespace Securiton.Tests.EditMode.Protocol
 {
   /// <summary>
   /// Verifies that the sensor value response payload is correctly
