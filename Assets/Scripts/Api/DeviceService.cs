@@ -19,10 +19,12 @@ namespace Securiton.Api
         private readonly IRequestSerializer<WriteUserPermissionsRequest> _writeUserPermissionsSerializer;
         private readonly IRequestSerializer<ReadSensorValueRequest> _readSensorValueSerializer;
         private readonly IRequestSerializer<ReadAlarmConfigurationRequest> _readAlarmConfigurationSerializer;
+        private readonly IRequestSerializer<ReadUserPermissionsRequest> _readUserPermissionsSerializer;
 
         private readonly IResponseDeserializer<AckResponse> _ackDeserializer;
         private readonly IResponseDeserializer<SensorValue> _sensorValueDeserializer;
         private readonly IResponseDeserializer<AlarmConfiguration> _alarmConfigurationDeserializer;
+        private readonly IResponseDeserializer<GroupPermission> _groupPermissionDeserializer;
 
         public DeviceService(
             DeviceClient client,
@@ -30,18 +32,22 @@ namespace Securiton.Api
             IRequestSerializer<WriteUserPermissionsRequest> writeUserPermissionsSerializer,
             IRequestSerializer<ReadSensorValueRequest> readSensorValueSerializer,
             IRequestSerializer<ReadAlarmConfigurationRequest> readAlarmConfigurationSerializer,
+            IRequestSerializer<ReadUserPermissionsRequest> readUserPermissionsSerializer,
             IResponseDeserializer<AckResponse> ackDeserializer,
             IResponseDeserializer<SensorValue> sensorValueDeserializer,
-            IResponseDeserializer<AlarmConfiguration> alarmConfigurationDeserializer)
+            IResponseDeserializer<AlarmConfiguration> alarmConfigurationDeserializer,
+            IResponseDeserializer<GroupPermission> groupPermissionDeserializer)
         {
             _client = client;
             _writeAlarmSerializer = writeAlarmSerializer;
             _writeUserPermissionsSerializer = writeUserPermissionsSerializer;
             _readSensorValueSerializer = readSensorValueSerializer;
             _readAlarmConfigurationSerializer = readAlarmConfigurationSerializer;
+            _readUserPermissionsSerializer = readUserPermissionsSerializer;
             _ackDeserializer = ackDeserializer;
             _sensorValueDeserializer = sensorValueDeserializer;
             _alarmConfigurationDeserializer = alarmConfigurationDeserializer;
+            _groupPermissionDeserializer = groupPermissionDeserializer;
         }
 
         public AckResponse WriteAlarmConfiguration(AlarmConfiguration configuration)
@@ -82,6 +88,16 @@ namespace Securiton.Api
                 request,
                 _readAlarmConfigurationSerializer,
                 _alarmConfigurationDeserializer);
+        }
+
+        public GroupPermission ReadUserPermissions()
+        {
+            var request = new ReadUserPermissionsRequest();
+
+            return _client.Send<ReadUserPermissionsRequest, GroupPermission>(
+                request,
+                _readUserPermissionsSerializer,
+                _groupPermissionDeserializer);
         }
     }
 }

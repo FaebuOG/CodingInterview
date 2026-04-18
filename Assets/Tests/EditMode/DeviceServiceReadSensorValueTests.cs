@@ -26,9 +26,9 @@ namespace Securiton.Tests.EditMode
       var packetParser = new ResponsePacketParser();
       var client = new DeviceClient(transport, encryptor, packetBuilder, packetParser);
 
-      var alarmSerializer = new AlarmConfigSerializer();
+      var writeAlarmSerializer = new AlarmConfigSerializer();
       var permissionSerializer = new PermissionSerializer();
-      var userPermissionsSerializer = new WriteUserPermissionsRequestSerializer(permissionSerializer);
+      var writeUserPermissionsSerializer = new WriteUserPermissionsRequestSerializer(permissionSerializer);
       var readSensorValueSerializer = new ReadSensorValueRequestSerializer();
 
       var ackDeserializer = new AckResponseDeserializer();
@@ -37,15 +37,21 @@ namespace Securiton.Tests.EditMode
       var readAlarmConfigurationSerializer = new ReadAlarmConfigurationRequestSerializer();
       var alarmConfigurationDeserializer = new AlarmConfigurationDeserializer();
 
+      var readUserPermissionsSerializer = new ReadUserPermissionsRequestSerializer();
+      var permissionDeserializer = new PermissionDeserializer();
+      var groupPermissionDeserializer = new GroupPermissionDeserializer(permissionDeserializer);
+      
       var service = new DeviceService(
         client,
-        alarmSerializer,
-        userPermissionsSerializer,
+        writeAlarmSerializer,
+        writeUserPermissionsSerializer,
         readSensorValueSerializer,
         readAlarmConfigurationSerializer,
+        readUserPermissionsSerializer,
         ackDeserializer,
         sensorValueDeserializer,
-        alarmConfigurationDeserializer);
+        alarmConfigurationDeserializer,
+        groupPermissionDeserializer);
 
       // Act
       SensorValue response = service.ReadSensorValue();

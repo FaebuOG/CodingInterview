@@ -32,11 +32,11 @@ namespace Securiton.Tests.EditMode
             var client = new DeviceClient(transport, encryptor, packetBuilder, packetParser);
 
             // Build serializers/deserializers used by the service.
-            var alarmSerializer = new AlarmConfigSerializer();
+            var writeAlarmSerializer = new AlarmConfigSerializer();
 
             // Serializes the hierarchical permission tree into the request payload.
             var permissionSerializer = new PermissionSerializer();
-            var userPermissionsSerializer = new WriteUserPermissionsRequestSerializer(permissionSerializer);
+            var writeUserPermissionsSerializer = new WriteUserPermissionsRequestSerializer(permissionSerializer);
 
             // ReadSensorValue dependencies are not used in this test directly,
             // but the DeviceService constructor now requires them.
@@ -50,15 +50,21 @@ namespace Securiton.Tests.EditMode
             var ackDeserializer = new AckResponseDeserializer();
 
 
+            var readUserPermissionsSerializer = new ReadUserPermissionsRequestSerializer();
+            var permissionDeserializer = new PermissionDeserializer();
+            var groupPermissionDeserializer = new GroupPermissionDeserializer(permissionDeserializer);
+      
             var service = new DeviceService(
                 client,
-                alarmSerializer,
-                userPermissionsSerializer,
+                writeAlarmSerializer,
+                writeUserPermissionsSerializer,
                 readSensorValueSerializer,
                 readAlarmConfigurationSerializer,
+                readUserPermissionsSerializer,
                 ackDeserializer,
                 sensorValueDeserializer,
-                alarmConfigurationDeserializer);
+                alarmConfigurationDeserializer,
+                groupPermissionDeserializer);
 
             // Create a realistic permission tree:
             // root group with a simple permission, an access-level permission,

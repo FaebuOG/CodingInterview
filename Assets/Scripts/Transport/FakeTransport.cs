@@ -1,6 +1,9 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
 using Securiton.Api;
+using Securiton.Domain;
 using Securiton.Requests;
+using Securiton.Serialization;
 
 namespace Securiton.Transport
 {
@@ -21,6 +24,7 @@ namespace Securiton.Transport
                 ReadAlarmConfigurationRequest.Id => BuildAlarmConfigurationResponse(requestId, 10, 5, true),
                 WriteAlarmConfigurationRequest.Id => BuildAckResponse(requestId, true, 0x00),
                 ReadSensorValueRequest.Id => BuildSensorValueResponse(requestId, 42.5f),
+                ReadUserPermissionsRequest.Id => BuildUserPermissionsResponse(requestId),
                 WriteUserPermissionsRequest.Id => BuildAckResponse(requestId, true, 0x00),
                 _ => BuildAckResponse(requestId, false, 0xFF)
             };
@@ -108,6 +112,42 @@ namespace Securiton.Transport
 
             writer.Flush();
             return stream.ToArray();
+        }
+
+        private static byte[] BuildUserPermissionsResponse(byte requestId)
+        {
+            using var stream = new MemoryStream();
+            using var writer = new BinaryWriter(stream);
+
+            writer.Write(requestId);
+            writer.Write((byte)0x00);
+
+            byte[] payload = BuildUserPermissionsPayload();
+            writer.Write(payload.Length);
+            writer.Write(payload);
+
+            writer.Flush();
+            return stream.ToArray();
+        }
+
+        private static byte[] BuildUserPermissionsPayload()
+        {
+            var root = new GroupPermission(
+                "Root",
+                new List<Permission>
+                {
+                    new SimplePermission("CanRead", true),
+                    new AccessLevelPermission("DoorAccess", 2),
+                    new GroupPermission(
+                        "Reports",
+                        new List<Permission>
+                        {
+                            new SimplePermission("CanExport", false)
+                        })
+                });
+
+            var serializer = new PermissionSerializer();
+            return serializer.Serialize(root);
         }
     }
 }
