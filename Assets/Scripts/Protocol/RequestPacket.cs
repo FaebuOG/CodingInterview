@@ -1,4 +1,4 @@
-﻿namespace Securiton
+﻿namespace Securiton.Protocol
 {
   public class RequestPacket
   {

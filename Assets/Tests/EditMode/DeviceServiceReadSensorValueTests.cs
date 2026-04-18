@@ -10,10 +10,14 @@ using Securiton.Transport;
 
 namespace Securiton.Tests.EditMode
 {
-  public sealed class DeviceServiceTests
+  /// <summary>
+  /// Verifies that the read flow works end-to-end:
+  /// request -> packet -> transport -> response parse -> deserialization.
+  /// </summary>
+  public sealed class DeviceServiceReadSensorValueTests
   {
     [Test]
-    public void WriteAlarmConfiguration_ReturnsSuccessfulAck()
+    public void ReadSensorValue_ReturnsExpectedValue()
     {
       // Arrange
       var transport = new FakeTransport();
@@ -38,14 +42,12 @@ namespace Securiton.Tests.EditMode
         ackDeserializer,
         sensorValueDeserializer);
 
-      var configuration = new AlarmConfiguration(10, 5, true);
-
       // Act
-      AckResponse response = service.WriteAlarmConfiguration(configuration);
+      SensorValue response = service.ReadSensorValue();
 
       // Assert
-      Assert.That(response.Success, Is.True);
-      Assert.That(response.ErrorCode, Is.EqualTo(0x00));
+      Assert.That(response, Is.Not.Null);
+      Assert.That(response.Value, Is.EqualTo(42.5f));
     }
   }
 }

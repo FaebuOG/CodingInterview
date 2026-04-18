@@ -1,7 +1,15 @@
-﻿namespace Securiton
+﻿namespace Securiton.Domain
 {
-  public class SensorValue
+  /// <summary>
+  /// Domain object representing the current sensor value returned by the device.
+  /// </summary>
+  public sealed class SensorValue
   {
-    
+    public float Value { get; }
+
+    public SensorValue(float value)
+    {
+      Value = value;
+    }
   }
 }
